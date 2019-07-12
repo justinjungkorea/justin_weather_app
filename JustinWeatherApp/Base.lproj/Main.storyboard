@@ -44,15 +44,15 @@
                                     <constraint firstAttribute="bottom" secondItem="bLn-y1-8Rx" secondAttribute="bottom" id="rKS-7Z-ssi"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jyi-LJ-IIu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jyi-LJ-IIu">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="180" id="5Jj-c8-YgT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SummaryTableViewCell" rowHeight="180" id="5Jj-c8-YgT" customClass="SummaryTableViewCell" customModule="JustinWeatherApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Jj-c8-YgT" id="bnJ-3g-baG">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ieu-bX-D7l">
@@ -99,12 +99,18 @@
                                                 <constraint firstItem="Bko-Sf-9H1" firstAttribute="height" secondItem="Ieu-bX-D7l" secondAttribute="height" id="pUw-Pi-QEJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currentTemperatureLabel" destination="ih4-I9-x3C" id="Qh7-mZ-IyH"/>
+                                            <outlet property="minMaxLabel" destination="xnD-hr-Tni" id="65I-8y-fjQ"/>
+                                            <outlet property="statusLabel" destination="Bko-Sf-9H1" id="qLR-KR-fer"/>
+                                            <outlet property="weatherImageView" destination="Ieu-bX-D7l" id="0hL-5k-Hq2"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="80" id="n62-fD-PSm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ForecastTableViewCell" rowHeight="80" id="n62-fD-PSm" customClass="ForecastTableViewCell" customModule="JustinWeatherApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="208" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n62-fD-PSm" id="Ehx-CH-FAF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42K-Za-Baq">
@@ -155,6 +161,13 @@
                                                 <constraint firstItem="9M9-yy-5D4" firstAttribute="centerY" secondItem="42K-Za-Baq" secondAttribute="centerY" id="sW0-Rx-NZx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="WOP-TU-0FC" id="RkK-8A-Vjk"/>
+                                            <outlet property="statusLabel" destination="9M9-yy-5D4" id="Hxd-0B-MV9"/>
+                                            <outlet property="temperatureLabel" destination="42K-Za-Baq" id="lNx-wj-Hkc"/>
+                                            <outlet property="timeLabel" destination="mYj-Ca-PXP" id="S54-jM-PFy"/>
+                                            <outlet property="weatherImageView" destination="YpO-6l-bR9" id="Nam-zi-waz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
