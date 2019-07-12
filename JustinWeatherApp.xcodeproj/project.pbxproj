@@ -20,6 +20,7 @@
 /* Begin PBXFileReference section */
 		E745AF7722D8634200777264 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		E745AF7922D8637300777264 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
+		E745AF7C22D86A4D00777264 /* Summaryapi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Summaryapi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E76439E322BB2F5A0082D6E5 /* JustinWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustinWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76439E622BB2F5A0082D6E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E76439E822BB2F5A0082D6E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +51,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		E745AF7B22D86A2E00777264 /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				E745AF7C22D86A4D00777264 /* Summaryapi.playground */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
 		E76439DA22BB2F5A0082D6E5 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +78,7 @@
 		E76439E522BB2F5A0082D6E5 /* JustinWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				E745AF7B22D86A2E00777264 /* Prototype */,
 				E745AF7622D8631C00777264 /* Cell */,
 				E76439E622BB2F5A0082D6E5 /* AppDelegate.swift */,
 				E76439E822BB2F5A0082D6E5 /* ViewController.swift */,
