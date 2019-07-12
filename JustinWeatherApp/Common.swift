@@ -8,4 +8,4 @@
 
 import Foundation
 
-let appkey = "937160a0-5132-470d-abdc-f22b0bd62c94"
+let appkey = "937160a0-5132-470d-abdc-f22b0bd62c94"
