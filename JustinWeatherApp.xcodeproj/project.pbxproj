@@ -15,6 +15,7 @@
 		E76439EE22BB2F5D0082D6E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76439ED22BB2F5D0082D6E5 /* Assets.xcassets */; };
 		E76439F122BB2F5D0082D6E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E76439EF22BB2F5D0082D6E5 /* LaunchScreen.storyboard */; };
 		E7B22FCF22D71EFF009D1141 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B22FCE22D71EFF009D1141 /* Common.swift */; };
+		E7B55A6622DA26E2004B5240 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B55A6522DA26E2004B5240 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E76439F222BB2F5D0082D6E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A4844822DA215300104149 /* Forecastapi.temp_caseinsensitive_rename.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Forecastapi.temp_caseinsensitive_rename.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E7B22FCE22D71EFF009D1141 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		E7B55A6522DA26E2004B5240 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E76439EF22BB2F5D0082D6E5 /* LaunchScreen.storyboard */,
 				E76439F222BB2F5D0082D6E5 /* Info.plist */,
 				E7B22FCE22D71EFF009D1141 /* Common.swift */,
+				E7B55A6522DA26E2004B5240 /* Model.swift */,
 			);
 			path = JustinWeatherApp;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				E76439E922BB2F5A0082D6E5 /* ViewController.swift in Sources */,
 				E745AF7A22D8637300777264 /* ForecastTableViewCell.swift in Sources */,
 				E7B22FCF22D71EFF009D1141 /* Common.swift in Sources */,
+				E7B55A6622DA26E2004B5240 /* Model.swift in Sources */,
 				E745AF7822D8634200777264 /* SummaryTableViewCell.swift in Sources */,
 				E76439E722BB2F5A0082D6E5 /* AppDelegate.swift in Sources */,
 			);
