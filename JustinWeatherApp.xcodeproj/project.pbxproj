@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70DB80022E060BB0080529E /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		E745AF7722D8634200777264 /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		E745AF7922D8637300777264 /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		E745AF7C22D86A4D00777264 /* Summaryapi.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Summaryapi.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -86,6 +87,7 @@
 				E745AF7622D8631C00777264 /* Cell */,
 				E76439E622BB2F5A0082D6E5 /* AppDelegate.swift */,
 				E76439E822BB2F5A0082D6E5 /* ViewController.swift */,
+				E70DB80022E060BB0080529E /* Location.gpx */,
 				E76439EA22BB2F5A0082D6E5 /* Main.storyboard */,
 				E76439ED22BB2F5D0082D6E5 /* Assets.xcassets */,
 				E76439EF22BB2F5D0082D6E5 /* LaunchScreen.storyboard */,
