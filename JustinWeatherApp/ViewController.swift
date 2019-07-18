@@ -7,8 +7,29 @@
 //
 
 import UIKit
+import CoreLocation
+
+extension UIViewController{
+    func show(message: String){
+        let alert = UIAlertController(title: "알림", message: message, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+        alert.addAction(ok)
+        
+        present(alert, animated: true, completion: nil)
+    }
+}
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var locationLabel: UILabel!
+
+    lazy var locationManager: CLLocationManager = {
+        let m = CLLocationManager()
+        m.delegate = self
+        return m
+    }()
     
     let tempFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
@@ -42,6 +63,27 @@ class ViewController: UIViewController {
             [weak self] in self?.listTableView.reloadData()
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        locationLabel.text = "업데이트 중..."
+        
+        if CLLocationManager.locationServicesEnabled(){
+            switch CLLocationManager.authorizationStatus(){
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            case .authorizedWhenInUse, .authorizedAlways:
+                updateCurrentLocation()
+            case .denied, .restricted:
+                show(message: "위치 서비스 사용 불가")
+                
+            }
+            
+        } else {
+            show(message: "위치 서비스 사용 불가")
+        }
+    }
 
     var topInset: CGFloat = 0.0
     
@@ -57,6 +99,31 @@ class ViewController: UIViewController {
         }
     }
 
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func updateCurrentLocation(){
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        manager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        show(message: error.localizedDescription)
+        manager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .authorizedWhenInUse, .authorizedAlways:
+            updateCurrentLocation()
+        default:
+            break
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource{

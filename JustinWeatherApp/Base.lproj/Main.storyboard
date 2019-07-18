@@ -205,6 +205,7 @@
                     </view>
                     <connections>
                         <outlet property="listTableView" destination="Jyi-LJ-IIu" id="Xhg-0v-BI4"/>
+                        <outlet property="locationLabel" destination="bLn-y1-8Rx" id="agC-gh-y4G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
