@@ -54,13 +54,7 @@ class ViewController: UIViewController {
         listTableView.separatorStyle = .none
         listTableView.showsVerticalScrollIndicator = false
         
-        WeatherDataSource.shared.fetchSummary(lat: 37.498206, lon: 127.02761){
-            [weak self] in self?.listTableView.reloadData()
-        }
         
-        WeatherDataSource.shared.fetchForecast(lat: 37.498206, lon: 127.02761){
-            [weak self] in self?.listTableView.reloadData()
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,6 +113,10 @@ extension ViewController: CLLocationManagerDelegate {
                         self?.locationLabel.text = place.name
                     }
                 }
+            }
+            
+            WeatherDataSource.shared.fetch(location: loc){
+                self.listTableView.reloadData()
             }
         }
         

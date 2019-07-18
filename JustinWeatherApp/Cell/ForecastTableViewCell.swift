@@ -19,12 +19,13 @@ class ForecastTableViewCell: UITableViewCell {
     
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         backgroundColor = UIColor.clear
         statusLabel.textColor  = UIColor.white
-        dateLabel.textColor = statusLabel.textColor 
+        dateLabel.textColor = statusLabel.textColor
         timeLabel.textColor = statusLabel.textColor
         temperatureLabel.textColor = statusLabel.textColor
     }
